@@ -1,7 +1,7 @@
 import math
 
 
-class frange:
+class Frange:
     def __init__(self, start, stop=None, step=1.0):
         if stop is None:
             start, stop = 0.0, start
@@ -23,16 +23,15 @@ class frange:
             raise ValueError("Step cannot be zero.")
 
 
-
-assert (list(frange(5)) == [0, 1, 2, 3, 4])
-assert (list(frange(2, 5)) == [2, 3, 4])
-assert (list(frange(2, 10, 2)) == [2, 4, 6, 8])
-assert (list(frange(10, 2, -2)) == [10, 8, 6, 4])
-assert (list(frange(2, 5.5, 1.5)) == [2, 3.5, 5])
-assert (list(frange(1, 5)) == [1, 2, 3, 4])
-assert (list(frange(0, 5)) == [0, 1, 2, 3, 4])
-assert (list(frange(0, 0)) == [])
-assert (list(frange(100, 0)) == [])
+assert (list(Frange(5)) == [0, 1, 2, 3, 4])
+assert (list(Frange(2, 5)) == [2, 3, 4])
+assert (list(Frange(2, 10, 2)) == [2, 4, 6, 8])
+assert (list(Frange(10, 2, -2)) == [10, 8, 6, 4])
+assert (list(Frange(2, 5.5, 1.5)) == [2, 3.5, 5])
+assert (list(Frange(1, 5)) == [1, 2, 3, 4])
+assert (list(Frange(0, 5)) == [0, 1, 2, 3, 4])
+assert (list(Frange(0, 0)) == [])
+assert (list(Frange(100, 0)) == [])
 
 print('SUCCESS!')
 
@@ -79,7 +78,6 @@ class Circle(Shape):
     def __contains__(self, point):
         distance_squared = (point.x - self.x) ** 2 + (point.y - self.y) ** 2
         return distance_squared <= self.radius ** 2
-
 
 
 class Rectangle(Shape):
@@ -130,7 +128,6 @@ c = Circle(10, 0, 10)
 c1 = Circle(100, 100, 5)
 
 p = Parallelogram(1, 2, 20, 30, 45)
-p1 = Parallelogram(1, 2, 20, 30, 45)
 
 scene = Scene()
 scene.add_figure(r)
